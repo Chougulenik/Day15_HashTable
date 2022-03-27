@@ -3,7 +3,10 @@ package com.bridgelabz;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		MyHashFunction func = new MyHashFunction("To be or not to be",4); 
+		//func.deleteData("Paranoids");
+		func.showTable();
 
 	}
 
