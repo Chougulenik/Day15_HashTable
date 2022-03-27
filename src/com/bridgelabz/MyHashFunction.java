@@ -38,10 +38,8 @@ public class MyHashFunction {
 						currNode.next = new MyMapNode(strArray[i]);
 						break;
 					}
-					currNode = currNode.next;
-					
-				}
-				
+					currNode = currNode.next;	
+				}	
 			}
 		}
 	}
