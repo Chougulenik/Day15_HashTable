@@ -59,4 +59,20 @@ public class MyHashFunction {
 		}
 	}
 	
+	public void deleteData(String data) {
+		int bucketIndex = Math.abs(data.hashCode() % bucketSize);
+		if(isEmpty()) {
+			return;
+		}
+		MyMapNode currNode = table[bucketIndex];
+		while(currNode != null) {
+			if(currNode.data.equals(data)) {
+				MyMapNode temp = currNode.next;
+				table[bucketIndex] = temp;
+				break;
+			}
+			currNode = currNode.next;
+		}
+	}
+	
 }
